@@ -1,0 +1,486 @@
+/* =========================================================
+   EXECUTIVE PRINT & PDF STYLESHEET
+   Professional Corporate Letterhead & Document Formatting
+   ========================================================= */
+
+/* On screen: printable containers are hidden unless viewed in preview modal */
+.print-only {
+  display: none;
+}
+
+/* =========================================================
+   MEDIA PRINT RULES (Hardware Printer & PDF Export Engine)
+   ========================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm;
+  }
+
+  /* Reset document background & fonts for clean paper output */
+  html,
+  body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #root,
+  .app-container {
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+    width: 100% !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+  }
+
+  /* CRITICAL: HIDE ENTIRE APP UI (Sidebar, Main Content, Modals, Toasts) */
+  .sidebar,
+  .main-content,
+  .top-header,
+  .page-body,
+  .dashboard-grid,
+  .stats-grid,
+  .card-panel,
+  .filter-bar,
+  .header-actions,
+  .table-actions,
+  .modal-overlay,
+  .toast-container,
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* SHOW ONLY THE PRINTABLE DOCUMENT FULL-WIDTH */
+  .print-only {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+}
+
+/* =========================================================
+   OFFICIAL EMPLOYEE DOSSIER STYLES (Print & Preview)
+   ========================================================= */
+.executive-dossier {
+  background: #ffffff;
+  color: #0f172a;
+  border: 2px solid #1e3a8a;
+  border-radius: 6px;
+  padding: 30px 36px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Top Decorative Header Bar */
+.dossier-top-accent {
+  height: 6px;
+  background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+  margin: -30px -36px 24px -36px;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Header Letterhead */
+.dossier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.dossier-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-crest {
+  width: 44px;
+  height: 44px;
+  background: #1e3a8a;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+.brand-names h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}
+
+.brand-names p {
+  font-size: 11px;
+  color: #475569;
+  margin: 2px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+.dossier-meta {
+  text-align: right;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.dossier-ref {
+  font-family: monospace;
+  font-weight: 700;
+  color: #1e3a8a;
+  font-size: 12px;
+}
+
+.dossier-verified-badge {
+  display: inline-block;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* Profile Identity Hero Box */
+.dossier-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+}
+
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #93c5fd;
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.15);
+}
+
+.hero-details h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hero-designation {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  margin: 3px 0 6px;
+}
+
+.hero-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pill-id {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 12px;
+  background: #1e293b;
+  color: #ffffff;
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+
+.pill-dept {
+  font-size: 11px;
+  font-weight: 600;
+  background: #e2e8f0;
+  color: #334155;
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+
+.hero-barcode {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.barcode-lines {
+  height: 32px;
+  width: 140px;
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+}
+
+.bar {
+  background-color: #0f172a;
+  height: 100%;
+}
+
+.barcode-text {
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* Structured Dossier Sections */
+.dossier-section {
+  margin-bottom: 22px;
+}
+
+.section-heading {
+  font-size: 11px;
+  font-weight: 800;
+  color: #1e3a8a;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 1.5px solid #cbd5e1;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.info-tile {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.info-tile.highlight {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.info-tile-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.info-tile-value {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.info-tile-value.currency {
+  font-size: 15px;
+  font-weight: 800;
+  color: #15803d;
+}
+
+/* Attestation Clause */
+.dossier-attestation {
+  background: #f1f5f9;
+  border-left: 3px solid #3b82f6;
+  padding: 10px 14px;
+  border-radius: 0 4px 4px 0;
+  font-size: 10.5px;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+/* Signatures & Corporate Seal */
+.dossier-signatures {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 36px;
+  padding-top: 10px;
+}
+
+.sig-block {
+  width: 220px;
+  text-align: center;
+}
+
+.sig-line {
+  border-top: 1.5px solid #334155;
+  margin-top: 40px;
+  padding-top: 6px;
+}
+
+.sig-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.sig-title {
+  font-size: 10.5px;
+  color: #64748b;
+}
+
+.corporate-seal {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #1e3a8a;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #1e3a8a;
+  font-size: 9px;
+  font-weight: 800;
+  text-align: center;
+  padding: 6px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  opacity: 0.85;
+}
+
+/* Legal Footer */
+.dossier-footer {
+  margin-top: 30px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9.5px;
+  color: #94a3b8;
+}
+
+/* =========================================================
+   EXECUTIVE DIRECTORY REPORT STYLES
+   ========================================================= */
+.directory-report {
+  background: #ffffff;
+  color: #0f172a;
+  padding: 10px;
+  width: 100%;
+}
+
+.report-header {
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.report-kpi-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.report-kpi {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.report-kpi-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.report-kpi-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 2px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10pt;
+  margin-bottom: 24px;
+}
+
+.report-table th {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  padding: 9px 12px;
+  text-align: left;
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.report-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #0f172a;
+}
+
+.report-table tr:nth-child(even) td {
+  background-color: #f8fafc;
+}
+
+.report-table tr:last-child td {
+  border-bottom: 2px solid #0f172a;
+}
