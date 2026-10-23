@@ -11,7 +11,7 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "electron:dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron .\"",
-    "electron:build": "npm run build && electron-builder --win"
+    "electron:build": "npm run build && node scripts/fixCache.mjs && electron-builder --win"
   },
   "dependencies": {
     "react": "^19.3.1",
